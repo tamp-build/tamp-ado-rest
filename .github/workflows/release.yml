@@ -25,6 +25,7 @@ env:
   # Use the published Tamp.Core via PackageReference (not sibling-clone
   # ProjectReference) — this is what makes the dogfood story load-bearing.
   TampCoreMode: package
+  TampHttpMode: package
 
 jobs:
   publish:
