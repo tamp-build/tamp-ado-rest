@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <RootNamespace>Tamp.AdoRest.V7</RootNamespace>
+    <AssemblyName>Tamp.AdoRest.V7</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <PackageId>Tamp.AdoRest.V7</PackageId>
+    <Description>Tamp library-mode wrapper for the Azure DevOps REST API 7.1. Typed surface for pull requests, builds, service endpoints, environments, agent pools, and branch policies. PAT typed as Secret. Built on Tamp.Http. v0.1.0 ships the surface Strata's pipeline needs.</Description>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(TampCorePath)" Condition="'$(TampCoreMode)' == 'project'" />
+    <PackageReference Include="Tamp.Core" Condition="'$(TampCoreMode)' == 'package'" />
+    <ProjectReference Include="$(TampHttpPath)" Condition="'$(TampHttpMode)' == 'project'" />
+    <PackageReference Include="Tamp.Http" Condition="'$(TampHttpMode)' == 'package'" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
