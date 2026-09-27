@@ -34,6 +34,7 @@ public sealed class ServiceEndpointsClient
     /// <param name="tenantId">Entra tenant GUID.</param>
     /// <param name="servicePrincipalClientId">Existing Entra app client ID — caller creates the SP first.</param>
     /// <param name="creationMode">Use <c>"Manual"</c> when the SP exists already; <c>"Automatic"</c> when ADO should provision it.</param>
+    /// <param name="ct">Token to cancel the request.</param>
     public Task<ServiceEndpoint> CreateWifAzureRmAsync(
         string project,
         string name,
